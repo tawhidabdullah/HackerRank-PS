@@ -29,3 +29,33 @@ function miniMaxSum(arr) {
 }
 
 console.log(miniMaxSum([5,5,5,5,5])) // 20 , 20
+
+
+
+
+// more clearn way to slove this problem 
+
+function minMaxsum(arr){
+  let min = arr[0],
+      max = min,
+      sum = min; 
+
+
+ for (let i = 1; i < arr.length; i++){
+   sum += arr[i]
+   if(arr[i] < min){
+     min = arr[i]
+   }
+   else if (arr[i] > max){
+     max = arr[i]
+   }
+ } 
+
+
+console.log(`${sum - min} ${sum - max}`)
+
+
+}; 
+
+
+minMaxsum([1, 2, 3, 4, 5])
