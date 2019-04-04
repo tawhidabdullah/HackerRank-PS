@@ -21,30 +21,26 @@ console.log(divisibleSumPairs(6,3,[1,3,2,6,1,2]));
 
 */
 
-
-
-// divisible sum with multipule pointers 
+// divisible sum with multipule pointers
 
 function divisibleSumPairs(n, k, ar) {
-   let firstPointer = 0; 
-    const results = []; 
-   for(let secondPointer = firstPointer + 1 ; secondPointer < ar.length; secondPointer++){
-    if(((ar[firstPointer] + ar[secondPointer]) % k) === 0 ){
-       firstPointer++; 
-       ar[firstPointer] = ar[secondPointer];    
+  let firstPointer = 0;
+  const results = [];
+  for (
+    let secondPointer = firstPointer + 1;
+    secondPointer < ar.length;
+    secondPointer++
+  ) {
+    if ((ar[firstPointer] + ar[secondPointer]) % k === 0) {
+      firstPointer++;
+      ar[firstPointer] = ar[secondPointer];
     }
+  }
 
-   }
-
-   return firstPointer+1; 
-
+  return firstPointer + 1;
 }
 
-console.log(divisibleSumPairs(6,3,[1,3,2,6,1,2])); 
-
-
-
-
+console.log(divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2]));
 
 /*
 
